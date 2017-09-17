@@ -9,5 +9,15 @@ namespace comicbookgal.Controllers
 {
     public class comicsbookController :Controller
     {
+
+        public ContentResult Detail() {
+
+            return new ContentResult()
+            {
+                Content = "Hello from controller"
+            };
+        }
     }
 }
+
+
