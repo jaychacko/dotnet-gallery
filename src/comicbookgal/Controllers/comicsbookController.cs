@@ -10,12 +10,16 @@ namespace comicbookgal.Controllers
     public class comicsbookController :Controller
     {
 
-        public ContentResult Detail() {
+        public ActionResult Detail() {
 
-            return new ContentResult()
+            if (DateTime.Today.DayOfWeek== DayOfWeek.Sunday)
+
             {
-                Content = "Hello from controller"
-            };
+                return Redirect ("/");
+            }
+
+            return Content("hello from detail");
+          
         }
     }
 }
